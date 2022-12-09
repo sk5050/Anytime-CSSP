@@ -1,6 +1,6 @@
 # An Anytime Algorithm For C-SSP With Deterministic Policies
 
-This repository contains the implementation of anytime algorithm for C-SSP. The paper is under review and will be updated once it is published.
+This repository contains the implementation of anytime algorithm for C-SSP. The paper will be published on AIJ special issue on Risk-Aware Autonomous Systems.
 
 ---------------
 ## How to run
