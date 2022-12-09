@@ -1,6 +1,8 @@
 # An Anytime Algorithm For C-SSP With Deterministic Policies
 
-This repository contains the implementation of anytime algorithm for C-SSP. The paper will be published on AIJ special issue on Risk-Aware Autonomous Systems.
+This repository contains the implementation of anytime algorithm for C-SSP. The paper is under review for AIJ special issue on Risk-Aware Autonomous Systems. A part of the codes were written for the following paper:
+
+S. Hong, S. U. Lee, X. Huang, M. Khonji, R. Alyassi, B. C. Williams, An anytime algorithm for chance constrained stochastic shortest path problems and its application to aircraft routing, in: 2021 IEEE International Conference on Robotics and Automation (ICRA), IEEE, 2021, pp. 475–481.
 
 ---------------
 ## How to run
