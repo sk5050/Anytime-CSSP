@@ -36,6 +36,8 @@ class CSSPSolver(object):
         self.t_start = time.time()
         self.anytime_solutions = []
 
+        self.solution_history = []
+
 
     def solve(self, initial_alpha_set):
 
@@ -53,6 +55,7 @@ class CSSPSolver(object):
         value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9 = self.algo.get_values(self.algo.graph.root)
         weighted_value = self.algo.compute_weighted_value(value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9)
         self.k_best_solution_set.append((weighted_value, (value_1,value_2,value_3), policy))
+        self.solution_history.append((weighted_value, (value_1,value_2,value_3), policy))
         
         f_plus = value_1
         g_plus = value_2 - self.bounds[0]
@@ -75,6 +78,7 @@ class CSSPSolver(object):
 
             del self.k_best_solution_set[0]   ## to keep only two solutions at the end. 
             self.k_best_solution_set.append((weighted_value, (value_1,value_2,value_3), policy))
+            self.solution_history.append((weighted_value, (value_1,value_2,value_3), policy))
 
             f_minus = value_1
             g_minus = value_2 - self.bounds[0]
@@ -115,6 +119,7 @@ class CSSPSolver(object):
 
             del self.k_best_solution_set[0]   ## to keep only two solutions at the end. 
             self.k_best_solution_set.append((weighted_value, (value_1,value_2,value_3), policy))
+            self.solution_history.append((weighted_value, (value_1,value_2,value_3), policy))
 
             L_u = value_1 + alpha*(value_2 - self.bounds[0])
             f = value_1
