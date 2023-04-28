@@ -28,6 +28,12 @@ class SkillChainingModel(object):
     def is_terminal(self, state):
         return state == self.goal
 
+    def update_state_transition_costs(self, state_transition_costs):
+        self.state_transition_costs = state_transition_costs
+
+    def update_state_transtion_probabilies(self, state_transition_probabilities):
+        self.state_transition_probabilities = state_transition_probabilities
+
     def state_transitions(self, state, action):
         state_trans = []
         for next_state, prob in self.state_transition_probabilities[state][action]:
