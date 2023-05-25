@@ -106,7 +106,8 @@ class CSSPSolver(object):
                 initial_alpha_set[0][1] = initial_alpha_set[0][1] * 10
 
                 if initial_alpha_set[0][1] > 10**9:
-                    raise ValueError("infeasble")
+                    return False
+                    # raise ValueError("infeasble")
             else:
                 break
 
